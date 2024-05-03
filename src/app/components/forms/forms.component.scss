@@ -26,5 +26,59 @@
 
 .form-group h3{
     font-size: 24px;
-    color: var(--light-text);
+    color: var(--medium-text);
+    font-weight: 300;
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.form-group .radio-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 4px;
+    border-top:  1px solid var(--light-text);
+    position: relative;
+    color: var(--medium-text);
+}
+
+
+// pegando o segundo filho de baixo para cima
+.form-group .radio-wrapper:nth-last-child(2){
+    border-bottom: 1px solid var(--light-text);
+    margin-bottom: 32px;
+} 
+
+.form-group .radio-wrapper span{
+    position: absolute;
+    right: 0px;
+}
+
+.form-group .btn-wrapper{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-group .btn-wrapper .btn{
+    font-size: 18px;
+    border-radius: 4px;
+    color: var(--dark-grey);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 14px;
+    width: 25%;
+    border: none;
+}
+
+.form-group .btn-wrapper .btn-primary{
+    background-color: var(--yellow);
+}
+
+.form-group .btn-wrapper .btn-secundary{
+    background-color: transparent;
+    border: 1px solid var(--dark-grey);
 }
