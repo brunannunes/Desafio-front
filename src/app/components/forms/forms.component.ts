@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
 @Component({
   selector: 'app-forms',
   standalone: true,
-  imports: [ReactiveFormsModule],
   templateUrl: './forms.component.html',
-  styleUrl: './forms.component.scss'
+  styleUrl: './forms.component.scss',
+  imports: [ReactiveFormsModule]
 })
 export class FormsComponent implements OnInit{
   
@@ -29,11 +29,11 @@ export class FormsComponent implements OnInit{
   }
 
     onSubmit(): void{
-      console.log("Submit")
+      console.log(this.formGroup.value)
     }
 
     onClean(): void{
-      console.log("clean")
+      this.formGroup.reset();
     }
 
 
