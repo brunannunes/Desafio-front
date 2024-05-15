@@ -20,10 +20,12 @@
         <span>18:01 ás 23:00</span>
     </div>
     <div class="checkbox-wrapper">
-        <!-- é através do formControlName que o angular vai entender
+        <div class="checkbox">
+             <!-- é através do formControlName que o angular vai entender
         que o input abaixo corresponde ao formGroup no arquivo .ts-->
-        <input type="checkbox" name="ShowClosed" formControlName="ShowClosed"/>
-        <label for="ShowClosed">Exibir unidades fechadas</label>
+            <input type="checkbox" name="ShowClosed" formControlName="ShowClosed"/>
+            <label for="ShowClosed">Exibir unidades fechadas</label>
+        </div>  
         <span>Resultados encontrados: {{results.length}}</span>
     </div>
     <div class="btn-wrapper">
