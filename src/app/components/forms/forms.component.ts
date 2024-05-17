@@ -27,7 +27,7 @@ export class FormsComponent implements OnInit{
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
       hour: '',
-      showClosed: false
+      showClosed: true
     })
     this.unitService.getAllUnits().subscribe(data => {
       //results recebe data
