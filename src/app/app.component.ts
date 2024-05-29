@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CommonModule } from '@angular/common';
 import {FormsComponent} from './components/forms/forms.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
 
 
@@ -15,5 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'desafio-SmartFit';
+  showList = new BehaviorSubject(false)
+
+  onSubmit(){
+    console.log("chegou no app")
+  }
 }

@@ -19,13 +19,24 @@ export class GetUnitsService {
   constructor(private httpClient: HttpClient) {
    this.httpClient.get<UnitsResponse>(this.apiUrl).subscribe(data => {
     //results recebe data
-    this.results = data.locations;
-    this.filtredResults = data.locations;
+    this.allUnitsSubject.next(data.locations)
+    this.filteredUnits = data.locations
 
-   }
+   });
+  
+  }
 
   //criando um metodo para poder pegar as unidades
-  getAllUnits(): Observable<UnitsResponse>{
-    return
+  getAllUnits(): Observable<Location[]>{
+    return this.allUnits$;
+  }
+
+  getFilteredUnits(){
+    return this.filteredUnits;
+  }
+  setFilteredUnits(value: Location[]){
+    this.filteredUnits = value;
   }
 }
+  
+
