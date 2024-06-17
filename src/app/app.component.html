@@ -1,6 +1,6 @@
 <div class="app-container">
     <app-header> </app-header>
     <app-forms (submitEvent)="onSubmit()"></app-forms>
-    <app-card-list *ngIf="(showList | async)"></app-card-list>
+    <app-card-list *ngIf="(showList | async)" [unitsList]="unitsList"></app-card-list>
 </div>
 

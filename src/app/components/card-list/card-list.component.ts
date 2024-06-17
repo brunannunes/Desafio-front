@@ -1,26 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GetUnitsService } from '../../services/get-units.service';
 import { Location } from '../../types/location.interface';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-card-list',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './card-list.component.html',
   styleUrl: './card-list.component.scss'
 })
 export class CardListComponent {
 
-  unitsList: Location[] = [];
+  @Input() unitsList: Location[] = [];
 
 
-  constructor(private unitService: GetUnitsService){
+  constructor(){
 
   }
 
   ngOnInit(): void{
-    this.unitsList = this.unitService.getFilteredUnits();
-    console.log(this.unitsList);
+    console.log(this.unitsList)
   }
 
 }
