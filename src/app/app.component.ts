@@ -9,11 +9,12 @@ import { CardListComponent } from './components/card-list/card-list.component';
 import { Location } from './types/location.interface';
 import { GetUnitsService } from './services/get-units.service';
 import { CardComponent } from './components/card/card.component';
+import { LegendComponent } from './components/legend/legend.component';
 
 @Component({
   selector: 'app-root',
   standalone: true, 
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FormsComponent, HttpClientModule, CardListComponent, CardComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FormsComponent, HttpClientModule, CardListComponent, CardComponent, LegendComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
